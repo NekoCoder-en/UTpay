@@ -1,134 +1,18 @@
-/* ===== Colores de UTPay (sacados del logo). Cámbialos aquí y se actualiza toda la página. ===== */
-:root {
-  --verde-oscuro: #1e5631;
-  --verde: #2f7a47;
-  --verde-claro: #9ad8ae;
-  --verde-suave: #eef7f0;
-  --texto: #1b2a20;
-  --texto-suave: #55665a;
-  --blanco: #ffffff;
-  --radio: 18px;
+/* Color de UTPay (del logo). Cámbialo aquí. */
+:root { --utpay: #1e5631; --utpay-hover: #174527; }
+
+.bg-utpay { background-color: var(--utpay); }
+
+.btn-utpay {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--utpay);
+  --bs-btn-border-color: var(--utpay);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--utpay-hover);
+  --bs-btn-hover-border-color: var(--utpay-hover);
+  --bs-btn-active-bg: var(--utpay-hover);
+  --bs-btn-active-border-color: var(--utpay-hover);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: "Poppins", system-ui, sans-serif;
-  color: var(--texto);
-  background: var(--blanco);
-  line-height: 1.6;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; }
-
-.contenedor { width: min(1100px, 100% - 32px); margin-inline: auto; }
-
-/* ===== Menú ===== */
-.menu {
-  position: sticky; top: 0; z-index: 10;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 12px max(16px, calc((100% - 1100px) / 2));
-  background: rgba(30, 86, 49, 0.95);
-  backdrop-filter: blur(8px);
-  color: var(--blanco);
-}
-.menu__marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 1.2rem; }
-.menu__marca img { width: 40px; height: 40px; border-radius: 50%; }
-.menu__links { display: flex; gap: 24px; }
-.menu__links a { text-decoration: none; font-weight: 500; opacity: .9; }
-.menu__links a:hover { color: var(--verde-claro); }
-
-/* ===== Hero ===== */
-.hero {
-  background: radial-gradient(circle at 80% 30%, var(--verde) 0%, var(--verde-oscuro) 60%);
-  color: var(--blanco);
-  padding: 90px 0 100px;
-}
-.hero__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
-.hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.1; margin: 12px 0 20px; }
-.hero h1 span { color: var(--verde-claro); }
-.hero__texto { font-size: 1.1rem; opacity: .92; max-width: 520px; }
-.hero__botones { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
-.hero__logo img {
-  width: min(380px, 100%); margin-inline: auto;
-  border-radius: 50%;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
-}
-
-.etiqueta {
-  display: inline-block; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--verde-claro);
-}
-.etiqueta--verde { color: var(--verde); }
-
-.boton { display: inline-block; padding: 12px 26px; border-radius: 999px; font-weight: 600; text-decoration: none; transition: transform .15s; }
-.boton:hover { transform: translateY(-2px); }
-.boton--claro { background: var(--verde-claro); color: var(--verde-oscuro); }
-.boton--borde { border: 2px solid var(--verde-claro); color: var(--blanco); }
-
-/* ===== Secciones ===== */
-.seccion { padding: 90px 0; }
-.seccion--suave { background: var(--verde-suave); }
-.seccion h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); color: var(--verde-oscuro); margin: 6px 0 16px; line-height: 1.2; }
-.seccion__intro { color: var(--texto-suave); max-width: 720px; font-size: 1.05rem; margin-bottom: 40px; }
-
-.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
-.tarjeta { background: var(--blanco); border: 1px solid #dfeee3; border-radius: var(--radio); padding: 26px; }
-.tarjeta__icono { font-size: 1.8rem; margin-bottom: 10px; }
-.tarjeta h3 { color: var(--verde-oscuro); font-size: 1.1rem; margin-bottom: 6px; }
-.tarjeta p { color: var(--texto-suave); font-size: .95rem; }
-
-.funciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 30px; }
-.funcion { background: var(--blanco); border-left: 5px solid var(--verde); border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; }
-.funcion strong { color: var(--verde-oscuro); }
-.funcion span { color: var(--texto-suave); font-size: .95rem; }
-
-/* ===== Misión y visión ===== */
-.mv { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.mv__caja { background: var(--verde-suave); border-radius: var(--radio); padding: 40px; }
-.mv__caja p:last-child { color: var(--texto-suave); font-size: 1.05rem; }
-.mv__caja--oscura { background: var(--verde-oscuro); color: var(--blanco); }
-.mv__caja--oscura h2 { color: var(--blanco); }
-.mv__caja--oscura p:last-child { color: #d6eadb; }
-
-/* ===== Equipo ===== */
-.equipo { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-.persona { background: var(--blanco); border-radius: var(--radio); padding: 30px 20px; text-align: center; box-shadow: 0 8px 24px rgba(30, 86, 49, .08); }
-.persona__foto {
-  position: relative; width: 140px; height: 140px; margin: 0 auto 16px;
-  border-radius: 50%; overflow: hidden; border: 4px solid var(--verde-claro);
-  background: var(--verde);
-}
-.persona__foto img { width: 100%; height: 100%; object-fit: cover; }
-.persona__foto.sin-foto img { display: none; }
-.persona__foto.sin-foto::after {
-  content: attr(data-iniciales);
-  position: absolute; inset: 0; display: grid; place-items: center;
-  color: var(--blanco); font-size: 3rem; font-weight: 700;
-}
-.persona h3 { color: var(--verde-oscuro); font-size: 1.2rem; }
-.persona__rol { color: var(--texto-suave); font-size: .9rem; margin-bottom: 14px; }
-.persona__links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-.persona__links a { font-size: .85rem; font-weight: 600; text-decoration: none; padding: 6px 14px; border-radius: 999px; background: var(--verde-suave); color: var(--verde-oscuro); }
-.persona__links a:hover { background: var(--verde-claro); }
-
-.repos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; }
-.repo { display: flex; flex-direction: column; text-decoration: none; background: var(--verde-oscuro); color: var(--blanco); border-radius: 14px; padding: 18px 22px; }
-.repo span { color: var(--verde-claro); font-size: .9rem; }
-.repo:hover { background: var(--verde); }
-
-/* ===== Pie ===== */
-.pie { background: var(--verde-oscuro); color: #d6eadb; text-align: center; padding: 40px 16px; font-size: .9rem; }
-.pie img { width: 56px; border-radius: 50%; margin: 0 auto 12px; }
-.pie__anio { opacity: .7; margin-top: 4px; }
-
-/* ===== Celular ===== */
-@media (max-width: 760px) {
-  .menu__links { display: none; }
-  .hero { padding: 60px 0 70px; }
-  .hero__grid, .mv, .repos { grid-template-columns: 1fr; }
-  .hero__logo { order: -1; }
-  .hero__logo img { width: 200px; }
-  .seccion { padding: 64px 0; }
-  .mv__caja { padding: 28px; }
-}
+/* Fotos del equipo: gris claro mientras no haya foto */
+.foto { object-fit: cover; background: #e9ecef; }

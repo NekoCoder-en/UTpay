@@ -1,224 +1,162 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UTPay · Pagos escolares de la UTSH</title>
-  <meta name="description" content="UTPay: la app para pagar tus adeudos escolares de la UTSH desde el teléfono." />
-  <link rel="icon" href="img/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="estilos.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UTPay</title>
+  <meta name="description" content="UTPay: app de pagos escolares de la UTSH.">
+  <link rel="icon" href="img/logo.png">
+  <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="estilos.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ============ MENÚ ============ -->
-  <header class="menu">
-    <a href="#inicio" class="menu__marca">
-      <img src="img/logo.png" alt="Logo de UTPay" />
-      <span>UTPay</span>
-    </a>
-    <nav class="menu__links">
-      <a href="#por-que">¿Por qué?</a>
-      <a href="#funciones">Funciones</a>
-      <a href="#mision">Misión y visión</a>
-      <a href="#equipo">Equipo</a>
-    </nav>
-  </header>
+  <!-- Menú -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-utpay sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo.png" alt="" width="32" height="32" class="rounded-circle">
+        UTPay
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#por-que">¿Por qué?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mision">Misión y visión</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!-- ============ HERO ============ -->
-  <section id="inicio" class="hero">
-    <div class="contenedor hero__grid">
-      <div>
-        <p class="etiqueta">Universidad Tecnológica de la Sierra Hidalguense</p>
-        <h1>Paga tu escuela<br /><span>sin hacer fila.</span></h1>
-        <p class="hero__texto">
-          UTPay es la app de pagos escolares de la UTSH. Consulta tus adeudos, revisa tus
-          calificaciones y tu beca, paga desde el teléfono y descarga tus comprobantes en segundos.
-        </p>
-        <div class="hero__botones">
-          <a href="#equipo" class="boton boton--claro">Conoce al equipo</a>
-          <a href="#por-que" class="boton boton--borde">¿Por qué UTPay?</a>
+  <!-- Portada -->
+  <header class="py-5 border-bottom">
+    <div class="container py-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-5 fw-bold mb-3">Pagos escolares de la UTSH, desde tu teléfono</h1>
+          <p class="lead text-body-secondary mb-4">
+            UTPay es una app hecha por alumnos de la Universidad Tecnológica de la Sierra Hidalguense
+            para consultar adeudos, pagar en línea y tener tus comprobantes siempre a la mano.
+          </p>
+          <a href="#por-que" class="btn btn-utpay btn-lg px-4 me-2">Conocer más</a>
+          <a href="#equipo" class="btn btn-outline-secondary btn-lg px-4">El equipo</a>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="img/logo.png" alt="Logo de UTPay" class="img-fluid rounded-circle" width="320" height="320">
         </div>
       </div>
-      <div class="hero__logo">
-        <img src="img/logo.png" alt="Logo de UTPay" />
-      </div>
     </div>
-  </section>
+  </header>
 
-  <!-- ============ POR QUÉ LA CREAMOS ============ -->
-  <section id="por-que" class="seccion">
-    <div class="contenedor">
-      <p class="etiqueta etiqueta--verde">El problema</p>
-      <h2>¿Por qué creamos UTPay?</h2>
-      <p class="seccion__intro">
-        Como alumnos de la UTSH vivimos lo mismo cada cuatrimestre: filas en caja, recibos de papel
-        que se pierden y dudas sobre cuánto debemos o si nos toca beca. Quisimos resolverlo con algo
-        que ya traemos en la bolsa: el teléfono.
+  <!-- Por qué la creamos -->
+  <section id="por-que" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-3">¿Por qué la creamos?</h2>
+      <p class="text-body-secondary col-lg-8 mb-5">
+        Cada cuatrimestre veíamos lo mismo: filas en caja, recibos de papel que se pierden y dudas
+        sobre cuánto se debe o si toca beca. Quisimos resolverlo con algo que todos traemos: el teléfono.
       </p>
-      <div class="tarjetas">
-        <article class="tarjeta">
-          <div class="tarjeta__icono">⏳</div>
-          <h3>Filas y horarios</h3>
-          <p>Pagar una mensualidad o una reinscripción significaba ir en horario de caja y esperar turno, perdiendo clases.</p>
-        </article>
-        <article class="tarjeta">
-          <div class="tarjeta__icono">🧾</div>
-          <h3>Recibos de papel</h3>
-          <p>Los comprobantes se pierden y nadie tiene a la mano su historial de pagos cuando lo necesita.</p>
-        </article>
-        <article class="tarjeta">
-          <div class="tarjeta__icono">❓</div>
-          <h3>Poca claridad</h3>
-          <p>No era fácil saber cuánto se debe, qué recargos hay o si el promedio del mes alcanzó para la beca.</p>
-        </article>
-        <article class="tarjeta">
-          <div class="tarjeta__icono">📊</div>
-          <h3>Trabajo manual en finanzas</h3>
-          <p>El personal capturaba adeudos, cortes y reportes a mano, con más riesgo de errores.</p>
-        </article>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-semibold">Sin filas</h5>
+          <p class="text-body-secondary">Pagar mensualidades o reinscripción ya no depende del horario de caja.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-semibold">Sin papel</h5>
+          <p class="text-body-secondary">Los comprobantes quedan guardados en la app y se descargan en PDF.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-semibold">Todo claro</h5>
+          <p class="text-body-secondary">Saldo, recargos, calificaciones y beca del mes en un solo lugar.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-semibold">Menos trabajo manual</h5>
+          <p class="text-body-secondary">Finanzas registra adeudos, cortes y reportes desde la misma app.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ QUÉ HACE ============ -->
-  <section id="funciones" class="seccion seccion--suave">
-    <div class="contenedor">
-      <p class="etiqueta etiqueta--verde">La solución</p>
-      <h2>Todo tu trámite escolar en una app</h2>
-      <div class="funciones">
-        <div class="funcion"><strong>Adeudos claros</strong><span>Ve tu saldo pendiente, fechas de pago y recargos al momento.</span></div>
-        <div class="funcion"><strong>Pago en línea</strong><span>Paga una o varias cuentas a la vez con PayPal o tarjeta.</span></div>
-        <div class="funcion"><strong>Comprobantes en PDF</strong><span>Tu historial de pagos siempre disponible para descargar.</span></div>
-        <div class="funcion"><strong>Materias y calificaciones</strong><span>Consulta tus calificaciones por unidad y si tienes beca en el corte.</span></div>
-        <div class="funcion"><strong>Cuenta institucional</strong><span>Entras con tu correo @utsh.edu.mx, de forma segura.</span></div>
-        <div class="funcion"><strong>Panel de finanzas</strong><span>Becas, recargos, cortes, horarios y reportes para el personal.</span></div>
+  <!-- Misión y visión -->
+  <section id="mision" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">Misión</h2>
+          <p class="text-body-secondary">
+            Facilitar a la comunidad de la UTSH el pago y la consulta de sus trámites escolares con una
+            herramienta digital segura, clara y accesible desde cualquier teléfono, para que los alumnos
+            dediquen su tiempo a estudiar y no a hacer filas.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">Visión</h2>
+          <p class="text-body-secondary">
+            Ser la plataforma de pagos y servicios escolares de la UTSH y un modelo que otras
+            universidades tecnológicas puedan adoptar, con trámites digitales, transparentes y sin papel.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ MISIÓN Y VISIÓN ============ -->
-  <section id="mision" class="seccion">
-    <div class="contenedor mv">
-      <article class="mv__caja">
-        <p class="etiqueta etiqueta--verde">Misión</p>
-        <h2>Nuestra misión</h2>
-        <p>
-          Facilitar a la comunidad de la UTSH el pago y la consulta de sus trámites escolares con una
-          herramienta digital segura, clara y accesible desde cualquier teléfono, para que los alumnos
-          dediquen su tiempo a estudiar y no a hacer filas.
-        </p>
-      </article>
-      <article class="mv__caja mv__caja--oscura">
-        <p class="etiqueta">Visión</p>
-        <h2>Nuestra visión</h2>
-        <p>
-          Ser la plataforma oficial de pagos y servicios escolares de la UTSH y un modelo que otras
-          universidades tecnológicas puedan adoptar, con trámites cien por ciento digitales,
-          transparentes y sin papel.
-        </p>
-      </article>
-    </div>
-  </section>
+  <!-- Equipo
+       Para cambiar a alguien, edita su bloque.
+       Fotos: carpeta "fotos" con el nombre que dice src. -->
+  <section id="equipo" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-5 text-center">Equipo</h2>
+      <div class="row text-center g-4">
 
-  <!-- ============ EQUIPO ============
-       Para cambiar una persona, edita su bloque <article class="persona">.
-       La foto se toma de la carpeta "fotos" con el nombre indicado en src.
-       Si la foto no existe, se muestran las iniciales automáticamente.
-  -->
-  <section id="equipo" class="seccion seccion--suave">
-    <div class="contenedor">
-      <p class="etiqueta etiqueta--verde">Quiénes somos</p>
-      <h2>El equipo detrás de UTPay</h2>
-      <p class="seccion__intro">Somos cuatro estudiantes de la UTSH que diseñamos y programamos UTPay de principio a fin.</p>
+        <div class="col-6 col-lg-3">
+          <img src="fotos/irving.jpg" alt="Irving" class="foto rounded-circle mb-3" width="140" height="140">
+          <h5 class="fw-semibold mb-1">Irving</h5>
+          <a href="https://github.com/NekoCoder-en" target="_blank" rel="noopener" class="link-secondary">@NekoCoder-en</a>
+        </div>
 
-      <div class="equipo">
+        <div class="col-6 col-lg-3">
+          <img src="fotos/bryant.jpg" alt="Bryant" class="foto rounded-circle mb-3" width="140" height="140">
+          <h5 class="fw-semibold mb-1">Bryant</h5>
+          <!-- CAMBIAR: usuario de GitHub de Bryant (en el link y en el texto) -->
+          <a href="https://github.com/USUARIO-DE-BRYANT" target="_blank" rel="noopener" class="link-secondary">@USUARIO-DE-BRYANT</a>
+        </div>
 
-        <!-- INTEGRANTE 1 -->
-        <article class="persona">
-          <div class="persona__foto" data-iniciales="I">
-            <img src="fotos/irving.jpg" alt="Foto de Irving" />
-          </div>
-          <h3>Irving</h3>
-          <p class="persona__rol">Desarrollador · App y backend</p>
-          <div class="persona__links">
-            <a href="https://github.com/NekoCoder-en" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://github.com/NekoCoder-en/utpay-backend" target="_blank" rel="noopener">Repo backend</a>
-          </div>
-        </article>
+        <div class="col-6 col-lg-3">
+          <img src="fotos/efren.jpg" alt="Efrén" class="foto rounded-circle mb-3" width="140" height="140">
+          <h5 class="fw-semibold mb-1">Efrén</h5>
+          <!-- CAMBIAR: usuario de GitHub de Efrén (en el link y en el texto) -->
+          <a href="https://github.com/USUARIO-DE-EFREN" target="_blank" rel="noopener" class="link-secondary">@USUARIO-DE-EFREN</a>
+        </div>
 
-        <!-- INTEGRANTE 2 -->
-        <article class="persona">
-          <div class="persona__foto" data-iniciales="B">
-            <img src="fotos/bryant.jpg" alt="Foto de Bryant" />
-          </div>
-          <h3>Bryant</h3>
-          <p class="persona__rol">Desarrollador</p>
-          <div class="persona__links">
-            <!-- CAMBIAR: pon aquí el usuario de GitHub de Bryant -->
-            <a href="https://github.com/USUARIO-DE-BRYANT" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://github.com/hernandez-black/UTPay/tree/bryant-development" target="_blank" rel="noopener">Su rama</a>
-          </div>
-        </article>
+        <div class="col-6 col-lg-3">
+          <img src="fotos/jesus.jpg" alt="Jesús" class="foto rounded-circle mb-3" width="140" height="140">
+          <h5 class="fw-semibold mb-1">Jesús</h5>
+          <!-- CAMBIAR: usuario de GitHub de Jesús (en el link y en el texto) -->
+          <a href="https://github.com/USUARIO-DE-JESUS" target="_blank" rel="noopener" class="link-secondary">@USUARIO-DE-JESUS</a>
+        </div>
 
-        <!-- INTEGRANTE 3 -->
-        <article class="persona">
-          <div class="persona__foto" data-iniciales="E">
-            <img src="fotos/efren.jpg" alt="Foto de Efrén" />
-          </div>
-          <h3>Efrén</h3>
-          <p class="persona__rol">Desarrollador</p>
-          <div class="persona__links">
-            <!-- CAMBIAR: pon aquí el usuario de GitHub de Efrén -->
-            <a href="https://github.com/USUARIO-DE-EFREN" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://github.com/hernandez-black/UTPay/tree/efren-development" target="_blank" rel="noopener">Su rama</a>
-          </div>
-        </article>
-
-        <!-- INTEGRANTE 4 -->
-        <article class="persona">
-          <div class="persona__foto" data-iniciales="J">
-            <img src="fotos/jesus.jpg" alt="Foto de Jesús" />
-          </div>
-          <h3>Jesús</h3>
-          <p class="persona__rol">Desarrollador</p>
-          <div class="persona__links">
-            <!-- CAMBIAR: pon aquí el usuario de GitHub de Jesús -->
-            <a href="https://github.com/USUARIO-DE-JESUS" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://github.com/hernandez-black/UTPay/tree/jesus-development" target="_blank" rel="noopener">Su rama</a>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="repos">
-        <a href="https://github.com/hernandez-black/UTPay" target="_blank" rel="noopener" class="repo">
-          <strong>Repositorio de la app</strong><span>hernandez-black/UTPay · Expo + React Native</span>
-        </a>
-        <a href="https://github.com/NekoCoder-en/utpay-backend" target="_blank" rel="noopener" class="repo">
-          <strong>Repositorio del backend</strong><span>NekoCoder-en/utpay-backend · Fastify + PostgreSQL</span>
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- ============ PIE ============ -->
-  <footer class="pie">
-    <img src="img/logo.png" alt="" />
-    <p>UTPay · Proyecto de estudiantes de la Universidad Tecnológica de la Sierra Hidalguense</p>
-    <p class="pie__anio">© <span id="anio">2026</span></p>
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2 small text-body-secondary">
+      <span>© 2026 UTPay · UTSH</span>
+      <a href="#" class="link-secondary">Volver arriba</a>
+    </div>
   </footer>
 
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
   <script>
-    // Si una foto no existe, se esconde y se muestran las iniciales.
-    document.querySelectorAll('.persona__foto img').forEach(function (img) {
-      function sinFoto() { img.parentElement.classList.add('sin-foto'); }
-      img.addEventListener('error', sinFoto);
-      if (img.complete && img.naturalWidth === 0) sinFoto();
+    // Si falta una foto, deja un círculo gris en lugar del ícono de imagen rota.
+    document.querySelectorAll('img.foto').forEach(function (img) {
+      function vacia() { img.removeAttribute('src'); img.alt = ''; }
+      img.addEventListener('error', vacia);
+      if (img.complete && img.naturalWidth === 0) vacia();
     });
-    document.getElementById('anio').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
