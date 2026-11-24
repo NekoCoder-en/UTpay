@@ -1,0 +1,10 @@
+Pon aquí las fotos del equipo con EXACTAMENTE estos nombres:
+
+  irving.jpg
+  bryant.jpg
+  efren.jpg
+  jesus.jpg
+
+- De preferencia fotos cuadradas (por ejemplo 400x400). Se recortan en círculo solas.
+- Si una foto falta, la página muestra la inicial de la persona.
+- Si tu foto es .png, cambia la extensión en index.html (busca "fotos/") o conviértela a .jpg.
