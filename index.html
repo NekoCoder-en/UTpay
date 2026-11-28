@@ -3,147 +3,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b3d2a">
-  <title>UTPay · Tus pagos escolares, más simples</title>
-  <meta name="description" content="UTPay reúne tus adeudos, pagos y comprobantes escolares de la UTSH en una experiencia clara y accesible desde tu teléfono.">
+  <meta name="theme-color" content="#0f4d32">
+  <title>UTPay · Paga tus adeudos de la UTSH desde tu celular</title>
+  <meta name="description" content="UTPay es la app de la UTSH para consultar tus adeudos y materias, pagar en línea con Stripe o PayPal y descargar tus comprobantes en PDF.">
   <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="estilos.css" rel="stylesheet">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navegacion" aria-label="Navegación principal">
+  <!-- ===== Navegación ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom" aria-label="Navegación principal">
     <div class="container">
-      <a class="navbar-brand" href="#inicio" aria-label="UTPay, inicio">
-        <span class="brand-mark"><img src="img/logo.png" alt=""></span>
-        <span>UT<span>Pay</span></span>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img src="img/logo.png" alt="" width="36" height="36" class="rounded-circle">
+        <span class="fw-bold">UTPay</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#que-es">Qué es</a></li>
           <li class="nav-item"><a class="nav-link" href="#como-funciona">Cómo funciona</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-          <li class="nav-item ms-lg-3"><a class="nav-cta" href="#descargar">Descargar app</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-brand btn-sm px-3" href="#descargar">Descargar</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <main id="contenido">
+    <!-- ===== Hero ===== -->
     <header class="hero" id="inicio">
-      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
-      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
-      <div class="container hero-container">
+      <div class="container">
         <div class="row align-items-center gy-5">
-          <div class="col-lg-6 hero-copy reveal">
-            <div class="eyebrow"><span></span> Una nueva forma de pagar en la UTSH</div>
-            <h1>Tu vida escolar,<br><em>sin tantas vueltas.</em></h1>
-            <p class="hero-lead">Consulta adeudos, realiza pagos y conserva tus comprobantes desde un solo lugar. UTPay pone lo importante al alcance de tu teléfono.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#descargar">Descargar la app</a>
-              <a class="text-link" href="#como-funciona">Descubre cómo funciona <span aria-hidden="true">↓</span></a>
+          <div class="col-lg-6">
+            <span class="badge-soft">App para alumnos de la UTSH</span>
+            <h1 class="display-5 fw-bold mt-3">Tus pagos escolares, desde tu celular.</h1>
+            <p class="lead text-secondary mt-3">Consulta tus adeudos y materias, paga en línea con Stripe o PayPal y guarda tus comprobantes en PDF. Sin filas y sin vueltas a ventanilla.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-brand btn-lg js-apk" href="#">Descargar para Android</a>
+              <a class="btn btn-outline-secondary btn-lg" href="#como-funciona">Ver cómo funciona</a>
             </div>
-            <div class="hero-note">
-              <div class="mini-avatars" aria-hidden="true"><span>U</span><span>T</span><span>+</span></div>
-              <p>Creada por estudiantes,<br>pensada para estudiantes.</p>
-            </div>
+            <p class="small text-secondary mt-3 mb-0">Gratis · Android · Pagos seguros con Stripe y PayPal</p>
           </div>
-
-          <div class="col-lg-6 hero-visual reveal delay-1" aria-label="Vista previa ilustrativa de UTPay">
-            <div class="visual-stamp stamp-one"><span class="stamp-icon">✓</span><strong>Pago registrado</strong><small>Comprobante disponible</small></div>
-            <div class="visual-stamp stamp-two"><span class="stamp-icon">⌁</span><strong>Todo en orden</strong><small>Información actualizada</small></div>
-            <div class="phone-shell">
-              <div class="phone-screen">
-                <div class="phone-top"><span>9:41</span><span>● ●</span></div>
-                <div class="app-heading">
-                  <div><small>Hola, estudiante</small><h3>Mi cuenta</h3></div>
-                  <div class="app-avatar">UT</div>
-                </div>
-                <div class="balance-card">
-                  <span>Estado de cuenta</span>
-                  <strong>Todo en un lugar</strong>
-                  <div class="balance-line"><i></i><span>Consulta clara y rápida</span></div>
-                </div>
-                <div class="quick-title"><strong>Accesos rápidos</strong><small>Ver todo</small></div>
-                <div class="quick-grid">
-                  <div><span class="quick-icon">$</span><small>Pagar</small></div>
-                  <div><span class="quick-icon">▤</span><small>Adeudos</small></div>
-                  <div><span class="quick-icon">✓</span><small>Recibos</small></div>
-                </div>
-                <div class="activity-card">
-                  <div class="activity-icon">✓</div>
-                  <div><strong>Comprobante guardado</strong><small>Disponible cuando lo necesites</small></div>
-                </div>
-                <div class="phone-nav"><span class="active">●<small>Inicio</small></span><span>●<small>Pagos</small></span><span>●<small>Perfil</small></span></div>
+          <div class="col-lg-6 d-flex justify-content-center">
+            <!-- Vista ilustrativa de la app -->
+            <div class="phone" aria-hidden="true">
+              <div class="phone-head">
+                <img src="img/logo.png" alt="" width="28" height="28" class="rounded-circle">
+                <span>Mi cuenta</span>
               </div>
+              <div class="phone-card total">
+                <small>Saldo pendiente</small>
+                <strong>$1,250.00</strong>
+                <span class="pill">2 adeudos</span>
+              </div>
+              <div class="phone-row"><span>Reinscripción</span><b>$950.00</b></div>
+              <div class="phone-row"><span>Constancia de estudios</span><b>$300.00</b></div>
+              <div class="phone-btn">Pagar ahora</div>
+              <div class="phone-row done"><span>✓ Pago recibido · Comprobante PDF</span></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="hero-bottom" aria-hidden="true"></div>
     </header>
 
-    <section class="intro-section section-pad" id="beneficios">
+    <!-- ===== Qué es ===== -->
+    <section class="section" id="que-es">
       <div class="container">
-        <div class="section-heading reveal">
-          <div><span class="section-kicker">Menos trámites, más tranquilidad</span><h2>Lo escolar no tiene que sentirse complicado.</h2></div>
-          <p>UTPay organiza la información que antes estaba dispersa y la presenta de forma sencilla para que sepas qué sigue, sin perder tiempo.</p>
+        <div class="section-head">
+          <h2 class="fw-bold">¿Qué es UTPay?</h2>
+          <p class="text-secondary">Una app móvil que reúne tu situación escolar y tus pagos en un solo lugar.</p>
         </div>
-        <div class="benefit-grid">
-          <article class="benefit-card featured reveal">
-            <div class="card-icon">⌁</div><span class="card-label">Desde donde estés</span><h3>Adiós a las filas</h3>
-            <p>Consulta y realiza tus pagos sin depender del horario de caja. Tu teléfono se convierte en tu punto de acceso.</p>
-            <div class="card-illustration lines" aria-hidden="true"></div>
-          </article>
-          <article class="benefit-card reveal delay-1">
-            <div class="card-icon">▤</div><span class="card-label">Siempre contigo</span><h3>Comprobantes ordenados</h3>
-            <p>Cada recibo queda guardado para consultarlo o descargarlo cuando lo necesites.</p>
-          </article>
-          <article class="benefit-card reveal delay-2">
-            <div class="card-icon">◎</div><span class="card-label">Sin confusiones</span><h3>Información clara</h3>
-            <p>Visualiza saldo, recargos, beca y movimientos desde una misma experiencia.</p>
-          </article>
-          <article class="benefit-card wide reveal">
-            <div><div class="card-icon">✓</div><span class="card-label">Control de principio a fin</span><h3>Sabes qué pagaste y qué sigue</h3><p>Un historial fácil de entender te ayuda a mantener el control durante todo el cuatrimestre.</p></div>
-            <div class="mini-history" aria-hidden="true">
-              <div><i>✓</i><span><b>Pago registrado</b><small>Comprobante listo</small></span></div>
-              <div><i>✓</i><span><b>Movimiento consultado</b><small>Información disponible</small></span></div>
-              <div><i>✓</i><span><b>Cuenta organizada</b><small>Todo al día</small></span></div>
-            </div>
-          </article>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="feature h-100">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"/></svg>
+              </div>
+              <h3 class="h5 fw-semibold">Consulta adeudos y materias</h3>
+              <p class="text-secondary mb-0">Revisa qué debes, cuánto y en qué materias estás inscrito, siempre actualizado.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="feature h-100">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+              </div>
+              <h3 class="h5 fw-semibold">Paga en línea</h3>
+              <p class="text-secondary mb-0">Liquida tus adeudos con tarjeta mediante Stripe o con tu cuenta de PayPal.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="feature h-100">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 14l2 2 4-4"/></svg>
+              </div>
+              <h3 class="h5 fw-semibold">Comprobantes y avisos</h3>
+              <p class="text-secondary mb-0">Descarga tu comprobante en PDF y recibe notificaciones de pagos y fechas límite.</p>
+            </article>
+          </div>
         </div>
+        <p class="text-center text-secondary small mt-4 mb-0">El personal de Finanzas y Administración gestiona conceptos, pagos y alumnos desde sus propios roles.</p>
       </div>
     </section>
 
-    <section class="flow-section section-pad" id="como-funciona">
+    <!-- ===== Cómo funciona ===== -->
+    <section class="section bg-soft" id="como-funciona">
       <div class="container">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-5 reveal">
-            <span class="section-kicker light">Simple desde el primer toque</span>
-            <h2>Tres momentos.<br>Una experiencia fluida.</h2>
-            <p class="flow-intro">UTPay acompaña cada paso con información directa para que puedas avanzar con confianza.</p>
-            <div class="flow-steps" role="list">
-              <div class="flow-step active" role="listitem"><span>01</span><div><h3>Consulta</h3><p>Revisa tus conceptos y el estado de tu cuenta.</p></div></div>
-              <div class="flow-step" role="listitem"><span>02</span><div><h3>Realiza tu pago</h3><p>Completa el proceso desde tu dispositivo.</p></div></div>
-              <div class="flow-step" role="listitem"><span>03</span><div><h3>Guarda tu comprobante</h3><p>Consérvalo disponible dentro de la app.</p></div></div>
+        <div class="section-head">
+          <h2 class="fw-bold">Cómo funciona</h2>
+          <p class="text-secondary">Tres pasos y listo.</p>
+        </div>
+        <ol class="row g-4 list-unstyled steps">
+          <li class="col-md-4">
+            <div class="step h-100">
+              <span class="num">1</span>
+              <h3 class="h5 fw-semibold">Descarga e inicia sesión</h3>
+              <p class="text-secondary mb-0">Instala la app y entra con tu cuenta de alumno de la UTSH.</p>
             </div>
-          </div>
-          <div class="col-lg-7 reveal delay-1">
-            <div class="dashboard-window">
-              <div class="window-top"><span></span><span></span><span></span><b>UTPay</b></div>
-              <div class="window-body">
-                <aside><div class="aside-logo">U</div><i class="on"></i><i></i><i></i><i></i></aside>
-                <div class="window-content">
-                  <div class="window-title"><div><small>Panel personal</small><strong>Resumen de cuenta</strong></div><span>Estudiante</span></div>
-                  <div class="window-stats"><div><small>Estado</small><b>Al día</b></div><div><small>Comprobantes</small><b>Disponibles</b></div></div>
-                  <div class="chart-card"><span>Actividad reciente</span><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-                  <div class="window-row"><i>✓</i><span><b>Movimiento completado</b><small>La información quedó registrada</small></span><em>Listo</em></div>
-                  <div class="window-row"><i>▤</i><span><b>Comprobante disponible</b><small>Consúltalo cuando quieras</small></span><em>Guardado</em></div>
-                </div>
+          </li>
+          <li class="col-md-4">
+            <div class="step h-100">
+              <span class="num">2</span>
+              <h3 class="h5 fw-semibold">Revisa tus adeudos</h3>
+              <p class="text-secondary mb-0">Ve el detalle de lo que tienes pendiente y elige qué pagar.</p>
+            </div>
+          </li>
+          <li class="col-md-4">
+            <div class="step h-100">
+              <span class="num">3</span>
+              <h3 class="h5 fw-semibold">Paga y guarda tu comprobante</h3>
+              <p class="text-secondary mb-0">Paga con Stripe o PayPal y descarga tu comprobante en PDF al instante.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Descarga ===== -->
+    <section class="section" id="descargar">
+      <div class="container">
+        <div class="download">
+          <div class="row align-items-center gy-4">
+            <div class="col-md-7">
+              <h2 class="fw-bold">Pruébala hoy</h2>
+              <p class="mb-4">Descarga UTPay en tu Android y olvídate de las filas. Escanea el código con tu celular o usa el botón.</p>
+              <a class="btn btn-light btn-lg fw-semibold js-apk" href="#">Descargar APK</a>
+              <p class="small mt-3 mb-0 opacity-75">Si Android lo pide, permite instalar apps de este origen.</p>
+            </div>
+            <div class="col-md-5 d-flex justify-content-md-end justify-content-center">
+              <div class="qr-box">
+                <div id="qr" role="img" aria-label="Código QR para descargar UTPay"></div>
+                <small>Escanea para descargar</small>
               </div>
             </div>
           </div>
@@ -151,84 +169,54 @@
       </div>
     </section>
 
-    <section class="details-section section-pad">
+    <!-- ===== Equipo ===== -->
+    <section class="section bg-soft" id="equipo">
       <div class="container">
-        <div class="section-heading centered reveal"><span class="section-kicker">Hecha para el día a día</span><h2>Todo lo que necesitas, sin ruido.</h2><p>Una experiencia enfocada en resolver tareas escolares frecuentes de forma más directa.</p></div>
-        <div class="detail-list">
-          <article class="detail-item reveal"><span>01</span><div><h3>Tu información, a la vista</h3><p>Encuentra saldos, movimientos, becas y recargos sin navegar entre procesos confusos.</p></div><b aria-hidden="true">Vista clara</b></article>
-          <article class="detail-item reveal"><span>02</span><div><h3>Comprobantes sin papel</h3><p>Consulta el historial y descarga tus recibos en PDF para conservarlos donde prefieras.</p></div><b aria-hidden="true">Siempre disponibles</b></article>
-          <article class="detail-item reveal"><span>03</span><div><h3>Una experiencia accesible</h3><p>Diseñada para usarse cómodamente desde el teléfono, con pasos simples y mensajes comprensibles.</p></div><b aria-hidden="true">Fácil de usar</b></article>
+        <div class="section-head">
+          <h2 class="fw-bold">Equipo</h2>
+          <p class="text-secondary">Estudiantes de la UTSH que crearon UTPay.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="story-section section-pad" id="nosotros">
-      <div class="container">
-        <div class="story-card reveal">
-          <div class="story-copy">
-            <span class="section-kicker light">El origen de UTPay</span><h2>Nació de una experiencia que todos conocíamos.</h2>
-            <p>Filas en caja, recibos que se pierden y dudas sobre el estado de un pago. Como estudiantes de la Universidad Tecnológica de la Sierra Hidalguense, decidimos convertir ese problema cotidiano en una solución cercana.</p>
-            <p>Así nació UTPay: una herramienta que busca devolverle tiempo y claridad a la comunidad universitaria.</p>
-          </div>
-          <div class="story-quote"><span>“</span><p>Queremos que los trámites escolares se sientan tan naturales como cualquier otra tarea desde el teléfono.</p><small>Equipo UTPay</small></div>
-        </div>
-        <div class="purpose-grid">
-          <article class="purpose-card reveal"><span>Misión</span><h3>Facilitar lo importante.</h3><p>Acercar a la comunidad de la UTSH una herramienta digital clara y accesible para consultar y realizar pagos escolares.</p></article>
-          <article class="purpose-card reveal delay-1"><span>Visión</span><h3>Impulsar una universidad más ágil.</h3><p>Contribuir a que los trámites sean digitales, transparentes y con menos papel dentro de la vida universitaria.</p></article>
-        </div>
-        <div class="team-block reveal" id="equipo">
-          <div><span class="section-kicker">Las personas detrás</span><h2>Un equipo con una idea en común.</h2></div>
-          <div class="team-list" aria-label="Equipo UTPay">
-            <div><span>IR</span><strong>Irving</strong></div><div><span>BR</span><strong>Bryant</strong></div><div><span>EF</span><strong>Efrén</strong></div><div><span>JE</span><strong>Jesús</strong></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="download-section" id="descargar">
-      <div class="container">
-        <div class="download-card reveal">
-          <div class="download-copy">
-            <span class="section-kicker light">Lleva UTPay contigo</span><h2>Menos filas.<br>Más tiempo para ti.</h2>
-            <p>Escanea el código con la cámara de tu teléfono para descargar la app y comenzar.</p>
-            <div class="download-points"><span>✓ Consulta clara</span><span>✓ Comprobantes a la mano</span><span>✓ Experiencia móvil</span></div>
-          </div>
-          <div class="qr-panel">
-            <div class="qr-placeholder" role="img" aria-label="Espacio reservado para el código QR de descarga">
-              <span class="corner top-left"></span><span class="corner top-right"></span><span class="corner bottom-left"></span><span class="corner bottom-right"></span>
-              <div class="qr-center"><strong>QR</strong><small>Coloca aquí el código<br>de descarga</small></div>
-            </div>
-            <p><span></span> Escanea para descargar</p>
-          </div>
+        <!-- Cambia los usuarios de GitHub en los href (PENDIENTE = falta usuario) -->
+        <div class="row g-4 justify-content-center">
+          <div class="col-6 col-md-3"><a class="member" href="https://github.com/NekoCoder-en" target="_blank" rel="noopener"><span class="avatar">I</span><strong>Irving</strong><small>Ver GitHub</small></a></div>
+          <div class="col-6 col-md-3"><a class="member" href="https://github.com/PENDIENTE-bryant" target="_blank" rel="noopener"><span class="avatar">B</span><strong>Bryant</strong><small>Ver GitHub</small></a></div>
+          <div class="col-6 col-md-3"><a class="member" href="https://github.com/PENDIENTE-efren" target="_blank" rel="noopener"><span class="avatar">E</span><strong>Efrén</strong><small>Ver GitHub</small></a></div>
+          <div class="col-6 col-md-3"><a class="member" href="https://github.com/PENDIENTE-jesus" target="_blank" rel="noopener"><span class="avatar">J</span><strong>Jesús</strong><small>Ver GitHub</small></a></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <a class="footer-brand" href="#inicio"><span class="brand-mark"><img src="img/logo.png" alt=""></span><strong>UT<span>Pay</span></strong></a>
-      <p>Pagos escolares más simples para la comunidad UTSH.</p><span>© 2026 UTPay</span>
+  <!-- ===== Pie ===== -->
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <img src="img/logo.png" alt="" width="28" height="28" class="rounded-circle">
+        <span>© <span id="anio">2026</span> UTPay · UTSH</span>
+      </div>
+      <nav aria-label="Enlaces legales" class="d-flex gap-3">
+        <a href="#">Términos de uso</a>
+        <a href="#">Aviso de privacidad</a>
+        <a href="https://github.com/NekoCoder-en/UTpay" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </div>
   </footer>
 
-  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
   <script>
-    const nav = document.querySelector('#navegacion');
-    const menu = document.querySelector('#menu');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
-    document.querySelectorAll('#menu a').forEach((link) => link.addEventListener('click', () => {
-      const instance = bootstrap.Collapse.getInstance(menu);
-      if (instance) instance.hide();
+    // >>> Cambia aquí el enlace de descarga del APK (botones y QR se actualizan solos)
+    const APK_URL = 'https://github.com/NekoCoder-en/UTpay/releases/latest';
+
+    document.querySelectorAll('.js-apk').forEach(a => a.href = APK_URL);
+    document.getElementById('anio').textContent = new Date().getFullYear();
+    window.addEventListener('load', () => {
+      if (window.QRCode) new QRCode(document.getElementById('qr'), { text: APK_URL, width: 160, height: 160, colorDark: '#0f4d32', colorLight: '#ffffff' });
+    });
+    // Cierra el menú móvil al elegir una sección
+    document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => {
+      const m = document.getElementById('menu');
+      if (m.classList.contains('show') && window.bootstrap) bootstrap.Collapse.getOrCreateInstance(m).hide();
     }));
   </script>
 </body>
